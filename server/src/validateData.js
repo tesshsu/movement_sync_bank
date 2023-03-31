@@ -24,8 +24,13 @@ const validateData = (movements, balances) => {
     });
 
     if (unbalancedDates.length > 0) {
-        const messages = unbalancedDates.map((balance) => `Le solde du ${balance.date} ne correspond pas, le balance devrait être ${balance.balance}`);
-        return { success: false, message: messages };
+        let messages = unbalancedDates.map((balance) => `Le solde du ${balance.date} ne correspond pas, le balance devrait être ${balance.balance}`);
+        let extraInfo = '';
+        // Vérification object length dans les opérations et les balances sont egales
+        if (movements.length !== balances.length) {
+            extraInfo += `En plus le nombre d'opérations: ${movements.length} et de balances : ${balances.length} ne correspondent pas.`;
+        }
+        return { success: false, message: messages, info: extraInfo };
     }
 
     return { success: true };
