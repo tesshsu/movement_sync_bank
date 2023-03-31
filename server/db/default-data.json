@@ -1,0 +1,130 @@
+{
+  "correctData": {
+    "movements": [
+      {
+        "id": "1",
+        "label": "Payment 1",
+        "amount": -500,
+        "date": "2022-01-01"
+      },
+      {
+        "id": "2",
+        "label": "Payment 2",
+        "amount": -300,
+        "date": "2022-01-02"
+      },
+      {
+        "id": "3",
+        "label": "Deposit",
+        "amount": 800,
+        "date": "2022-01-03"
+      },
+      {
+        "id": "4",
+        "label": "Deposit",
+        "amount": 800,
+        "date": "2022-01-04"
+      }
+    ],
+    "balances": [
+      {
+        "date": "2022-01-01",
+        "balance": -500
+      },
+      {
+        "date": "2022-01-02",
+        "balance": -800
+      },
+      {
+        "date": "2022-01-03",
+        "balance": 0
+      },
+      {
+        "date": "2022-01-04",
+        "balance": 800
+      }
+    ]
+  },
+  "doubleRepeatData": {
+    "movements": [
+      {
+        "id": "1",
+        "label": "Payment 1",
+        "amount": -500,
+        "date": "2022-01-01"
+      },
+      {
+        "id": "2",
+        "label": "Payment 1",
+        "amount": -500,
+        "date": "2022-01-01"
+      },
+      {
+        "id": "3",
+        "label": "Deposit",
+        "amount": 800,
+        "date": "2022-01-03"
+      },
+      {
+        "id": "4",
+        "label": "Deposit",
+        "amount": 800,
+        "date": "2022-01-04"
+      }
+    ],
+    "balances": [
+      {
+        "date": "2022-01-01",
+        "balance": -500
+      },
+      {
+        "date": "2022-01-02",
+        "balance": -800
+      },
+      {
+        "date": "2022-01-03",
+        "balance": 0
+      },
+      {
+        "date": "2022-01-04",
+        "balance": 800
+      }
+    ]
+  },
+  "soldNotSyncData": {
+        "movements": [
+          {
+            "id": "1",
+            "label": "Payment 1",
+            "amount": -500,
+            "date": "2022-01-01"
+          },
+          {
+            "id": "2",
+            "label": "Payment 2",
+            "amount": -300,
+            "date": "2022-01-02"
+          },
+          {
+            "id": "3",
+            "label": "Deposit",
+            "amount": 800,
+            "date": "2022-01-03"
+          }
+        ],
+        "balances": [
+          {
+            "date": "2022-01-01",
+            "balance": 1000
+          },
+          {
+            "date": "2022-01-02",
+            "balance": 700
+          },
+          {
+            "date": "2022-01-03",
+            "balance": 1500
+          }
+        ]
+    }
+}

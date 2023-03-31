@@ -18,11 +18,8 @@ const validateData = (movements, balances) => {
         if (!foundMovement) {
             return true;
         }
-        console.log('foundMovement', foundMovement);
         const movementsBeforeDate = movements.filter((movement) => movement.date < balance.date);
-        console.log('movementsBeforeDate', movementsBeforeDate);
         const totalAmountBeforeDate = movementsBeforeDate.reduce((total, movement) => total + movement.amount, 0);
-        console.log('totalAmountBeforeDate', totalAmountBeforeDate);
         return totalAmountBeforeDate + foundMovement.amount !== balance.balance;
     });
 
