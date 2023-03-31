@@ -115,15 +115,19 @@
         "balances": [
           {
             "date": "2022-01-01",
-            "balance": 1000
+            "balance": -500
           },
           {
             "date": "2022-01-02",
-            "balance": 700
+            "balance": -900
           },
           {
             "date": "2022-01-03",
-            "balance": 1500
+            "balance": 0
+          },
+          {
+            "date": "2022-01-04",
+            "balance": 800
           }
         ]
     }

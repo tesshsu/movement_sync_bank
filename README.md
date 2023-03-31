@@ -11,5 +11,8 @@ npm start
 # Build the Docker image in the server folder
 docker build -t bank-validation-app .
 
+# Testing with unit tests
+npm test
+
 ## License
 This library is released under the MIT License.
