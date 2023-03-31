@@ -7,11 +7,8 @@ app.use(bodyParser.json());
 
 app.post('/movements/validation', async (req, res) => {
     const { movements, balances } = req.body;
-    console.log('movements', movements);
-    console.log('balances', balances);
     try {
         const validationResult = await validateData(movements, balances);
-        console.log('validationResult', validationResult);
         if (validationResult.success === true) {
             res.status(202).json({ message: 'Accepted' });
         } else {
@@ -26,3 +23,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
+
+module.exports = app;
