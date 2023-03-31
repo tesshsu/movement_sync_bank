@@ -8,7 +8,8 @@ const validateData = (movements, balances) => {
     });
 
     if (duplicates.length > 0) {
-        return { success: false, message: 'Les opérations contiennent des doublons.' };
+        const messages = duplicates.map((duplicate) => `Les opérations contiennent des doublons par ${duplicate.date} avec id ${duplicate.id}.`);
+        return { success: false, message: messages };
     }
 
     // Vérification de la synchronisation
@@ -25,9 +26,8 @@ const validateData = (movements, balances) => {
         return totalAmountBeforeDate + foundMovement.amount !== balance.balance;
     });
 
-    console.log('unbalancedDates', unbalancedDates);
     if (unbalancedDates.length > 0) {
-        const messages = unbalancedDates.map((balance) => `Le solde du ${balance.date} ne correspond pas.`);
+        const messages = unbalancedDates.map((balance) => `Le solde du ${balance.date} ne correspond pas, le balance devrait être ${balance.balance}`);
         return { success: false, message: messages };
     }
 
